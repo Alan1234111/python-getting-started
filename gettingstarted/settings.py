@@ -66,21 +66,6 @@ if IS_HEROKU_APP:
  #ALLOWED_HOSTS = ["*"]
 
 
-
-
-
-
-
-
-
-if IS_HEROKU_APP:
-    # On Heroku, it's safe to use a wildcard for `ALLOWED_HOSTS`, since the Heroku router performs
-    # validation of the Host header in the incoming HTTP request. On other platforms you may need to
-    # list the expected hostnames explicitly in production to prevent HTTP Host header attacks. See:
-    # https://docs.djangoproject.com/en/6.0/ref/settings/#std-setting-ALLOWED_HOSTS
-    ALLOWED_HOSTS = ["*"]
-
-
     # Redirect all non-HTTPS requests to HTTPS. This requires that:
     # 1. Your app has a TLS/SSL certificate, which all `*.herokuapp.com` domains do by default.
     #    When using a custom domain, you must configure one. See:
